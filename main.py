@@ -25,20 +25,32 @@ def auth_cred(): #authentication process
         raise e
     return api
 
-def message():
-    mention = api.mentions_timeline(count = 1)
+def recipt():
+    mention = api.mentions_timeline(count= 1)
+    global tweet
     for tweet in mention:
-        return tweet.user.screen_name
+        return tweet.user.id
 
-def content():
+def recipt_1():
+    text = open("id.txt", 'w')
+    i = str(recipt())
+    text.write(i)
+    text.close()
+
+def syst():
+    m = open("id.txt","r")
+    last_1 = m.readlines(1)
+    for line3 in last_1:
+        return line3
+
+
+def message():
     x = open('mx.txt','r')
     m = x.readlines(1)
     for lines in m:
         return lines
 
 
-def send_message(user,content):
-    api.send_direct_message(user,content)
 
 def mention(api,since_id):
     logger.info("Collecting info")
@@ -52,27 +64,41 @@ def mention(api,since_id):
 
         if tweet.in_reply_to_status_id is not None:
 
+            if not tweet.user.following:
+                tweet.user.follow()
+
             status_id = tweet.in_reply_to_status_id
             tweet_u = api.get_status(status_id,tweet_mode='extended')
 
             print(tweet_u.full_text)
-            f = open('mx.txt', 'w')
+            f = open('mx.txt', 'a')
             f.write(tweet_u.full_text)
             f.close()
 
 
     return new_since_id
 
+
 def main():
     api = auth_cred()
     since_id = 1 #the last mention you have.
     while True:
-        print(since_id)
-        d = mention(api,since_id)
-        print(content())
-        print(message())
-        logger.info("Waiting...")
-        time.sleep(60)
+        c = int(syst())
+        b = int(recipt())
+        if c!= b:
+            print('in...')
+            print(c)
+            print(b)
+            recipt_1()
+            print(syst())
+            print(since_id)
+            d = mention(api,since_id)
+            print(recipt())
+            api.send_direct_message(recipt(),message())
+            print('Message Send...')
+            logger.info("Waiting...")
+            print('Waiting...')
+            time.sleep(10)
 
 if __name__ == "__main__":
     main()
