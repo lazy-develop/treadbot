@@ -95,6 +95,7 @@ def main():
             #print(syst())
             #print(since_id)
             d = mention(api,since_id)
+            # print('api')
             #print(recipt())
             api.send_direct_message(recipt(),message())
             #print('Message Send...')
