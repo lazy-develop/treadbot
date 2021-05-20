@@ -87,20 +87,22 @@ def main():
         recipt_1()
         c = int(syst())
         b = int(recipt())
+        #print('again..')
         if c!= b:
-            print('in...')
-            print(c)
-            print(b)
+            #print(c)
+            #print(b)
             recipt_1()
-            print(syst())
-            print(since_id)
+            #print(syst())
+            #print(since_id)
             d = mention(api,since_id)
-            print(recipt())
+            #print(recipt())
             api.send_direct_message(recipt(),message())
-            print('Message Send...')
+            #print('Message Send...')
             logger.info("Waiting...")
-            print('Waiting...')
+            #print('Waiting...')
             time.sleep(60*10)
+        else:
+            continue
 
 if __name__ == "__main__":
     main()
