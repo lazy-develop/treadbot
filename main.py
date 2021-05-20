@@ -79,7 +79,7 @@ def mention(api,since_id):
     return new_since_id
 
 
-def main():
+def main(): #order of process being done
     api = auth_cred()
     since_id = 1 #the last mention you have.
     print(since_id)
@@ -87,20 +87,11 @@ def main():
         recipt_1()
         c = int(syst())
         b = int(recipt())
-        #print('again..')
         if c!= b:
-            #print(c)
-            #print(b)
             recipt_1()
-            #print(syst())
-            #print(since_id)
             d = mention(api,since_id)
-            # print('api')
-            #print(recipt())
             api.send_direct_message(recipt(),message())
-            #print('Message Send...')
             logger.info("Waiting...")
-            #print('Waiting...')
             time.sleep(60*10)
         else:
             continue
