@@ -64,7 +64,7 @@ def mention(api,since_id):
 
         if tweet.in_reply_to_status_id is not None:
 
-            if not tweet.user.following:
+            if not tweet.user.following and tweet.user.screen_name != '@jerry87273619':
                 tweet.user.follow()
 
             status_id = tweet.in_reply_to_status_id
@@ -82,7 +82,9 @@ def mention(api,since_id):
 def main():
     api = auth_cred()
     since_id = 1 #the last mention you have.
+    print(since_id)
     while True:
+        recipt_1()
         c = int(syst())
         b = int(recipt())
         if c!= b:
@@ -98,7 +100,7 @@ def main():
             print('Message Send...')
             logger.info("Waiting...")
             print('Waiting...')
-            time.sleep(10)
+            time.sleep(60*10)
 
 if __name__ == "__main__":
     main()
