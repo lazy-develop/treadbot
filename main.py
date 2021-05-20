@@ -84,7 +84,7 @@ def main(): #order of process being done
     since_id = 1 #the last mention you have.
     print(since_id)
     while True:
-        recipt_1()
+        #recipt_1()
         c = int(syst())
         b = int(recipt())
         if c!= b:
