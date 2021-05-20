@@ -11,7 +11,7 @@
   
   <h2>Possible Users Journey</h2>
   <ol>
-    <li>Tagging the bot <b>@jerry87273619</b> in Twitter</li>
+    <li>Tag the bot <b>@jerry87273619</b> in Twitter</li>
     <li> Thread is Messaged to you </li>
    </ol>
    
