@@ -6,7 +6,7 @@
 <ol>
   <li>Access Twitter API using Python</li>
   <li> Transform the tweets into .txt or pdf format using Python libraries </li>
-  <li>A simple user management system</li>
+  <li>Thread Messaged to the User</li>
  </ol>
   
   <h2>Possible Users Journey</h2>
