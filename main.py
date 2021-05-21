@@ -51,7 +51,6 @@ def message():
 
 
 def mention(api,since_id):
-    logger.info("Collecting info")
 
     new_since_id = since_id
 
