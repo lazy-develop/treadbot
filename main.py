@@ -80,17 +80,13 @@ def main(): #order of process being done
     api = auth_cred()
     since_id = 1 #the last mention you have.
     print(since_id)
-    while True:
-        #recipt_1()
-        c = int(syst())
-        b = int(recipt())
-        if c!= b:
-            recipt_1()
-            d = mention(api,since_id)
-            api.send_direct_message(recipt(),message()) 
-            time.sleep(60*10)
-        else:
-            continue
+    print('inside..') 
+    d = mention(api,since_id)
+    print(recipt()) 
+    print(message()) 
+    api.send_direct_message(recipt(),message())
+    print('success.... ') 
+    time.sleep(60*10)
 
 if __name__ == "__main__":
     main()
