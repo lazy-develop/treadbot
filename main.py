@@ -86,7 +86,7 @@ def main(): #order of process being done
     print(message()) 
     api.send_direct_message(recipt(),message())
     print('success.... ') 
-    time.sleep(60*10)
+    time.sleep(60)
 
 if __name__ == "__main__":
     main()
