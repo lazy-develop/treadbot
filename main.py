@@ -1,10 +1,8 @@
 import tweepy
-import logging
 import time
 import os
 from dotenv import load_dotenv
 load_dotenv()
-logger = logging.getLogger()
 def auth_cred(): #authentication process
     # api_token = os.getenv('API_KEY')
     # api_secret = os.getenv('API_SECRET')
@@ -90,8 +88,7 @@ def main(): #order of process being done
         if c!= b:
             recipt_1()
             d = mention(api,since_id)
-            api.send_direct_message(recipt(),message())
-            logger.info("Waiting...")
+            api.send_direct_message(recipt(),message()) 
             time.sleep(60*10)
         else:
             continue
