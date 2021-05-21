@@ -61,7 +61,7 @@ def mention(api,since_id):
 
         if tweet.in_reply_to_status_id is not None:
 
-            if not tweet.user.following and tweet.user.screen_name != '@jerry87273619':
+            if not tweet.user.following:
                 tweet.user.follow()
 
             status_id = tweet.in_reply_to_status_id
