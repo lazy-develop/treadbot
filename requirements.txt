@@ -1,7 +1,7 @@
 certifi==2020.12.5
 chardet==4.0.0
 idna==2.10
-logging==0.4.9.6
+
 oauthlib==3.1.0
 pip==21.1.1
 PySocks==1.7.1
