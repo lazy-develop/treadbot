@@ -68,7 +68,7 @@ def mention(api,since_id):
             tweet_u = api.get_status(status_id,tweet_mode='extended')
 
             print(tweet_u.full_text)
-            f = open('mx.txt', 'a')
+            f = open('mx.txt', 'w')
             f.write(tweet_u.full_text)
             f.close()
 
