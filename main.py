@@ -55,7 +55,7 @@ def mention(api,since_id):
     new_since_id = since_id
 
     for tweet in tweepy.Cursor(api.mentions_timeline,
-        since_id=since_id).items():
+        since_id=since_id).items(50):
 
         new_since_id = max(tweet.id, new_since_id)
 
