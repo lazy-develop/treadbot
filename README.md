@@ -19,13 +19,13 @@
    <h3>Team ID</h3>
    <h4>BFH/recKpmRF8VVH063e4/2021</h4>
    <br>
-   <a href="https://drive.google.com/file/d/1-uwoNoM_Q8-oc9C8TGKk_qD6Ex4lxIKe/view?usp=drivesdk">Link to Product walkthrough</a>
+   <a href="#">Link to Product walkthrough</a>
    <br>
    <h2>How it Works</h2>
    <p>Follow and Mention the bot(@jerry87273619) in the desired Tweet</p>
    <p>The bot Return the Thread within a limited Time</p>
    <br>
-   <a href="https://drive.google.com/file/d/1-uwoNoM_Q8-oc9C8TGKk_qD6Ex4lxIKe/view?usp=drivesdk">Link of Video<a>
+   <a href="#">Link of Video<a>
   <h3>LIbraries Used</h3>
   <ol>
     <li>tweepy==3.10.0</li>
